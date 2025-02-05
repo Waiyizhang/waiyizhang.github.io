@@ -1,0 +1,114 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI Example</title>
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <link rel="stylesheet" href="/static/css/search.css" />
+  </head>
+  <body>
+    <div id="App" class="app">
+      <div class="header">
+        <div class="icon"></div>
+      </div>
+      <div class="introduce">
+        <div class="introduce-wrapper">
+          <div class="introduce-img"></div>
+          <div class="footer">
+            <div id="SearchBtn" class="btn btn-search"></div>
+            <div id="EditBtn" class="btn btn-edit"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Search">
+      <h1 class="title">Search Mode</h1>
+      <div class="search">
+        <!-- 确定类型 -->
+        <div class="select-wrapper">
+          <select id="typeOptions" name="typeOptions">
+            <option value="">Please select</option>
+            <option value="sales">Sales</option>
+            <option value="preference">Preference</option>
+            <option value="get_top_selling_products">The most welcomed</option>
+          </select>
+        </div>
+        <!-- 确定主题 -->
+        <div class="select-wrapper">
+          <select id="SecondOptions" name="SecondOptions"></select>
+        </div>
+        <!-- 确定选项 -->
+        <div class="select-wrapper">
+          <select id="DataOptions" name="DataOptions"></select>
+        </div>
+      </div>
+
+      <div id="resolve">
+        <div id="chart"></div>
+        <div id="summary"></div>
+      </div>
+    </div>
+
+    <div id="Edit">
+      <h1 class="title">Edit Mode</h1>
+      <div class="edit">
+        <!-- form表单字段 User_ID, Gender, Age, Occupation, City_Category, Stay_In_Current_City_Years, Marital_Status -->
+        <form id="userForm">
+          <div class="form-container">
+            <div class="form-group">
+              <label for="userId">User ID:</label>
+              <input
+                type="text"
+                id="userId"
+                name="User_ID"
+                placeholder="Please input User ID"
+              />
+            </div>
+            <div class="form-group">
+              <label for="gender">Gender:</label>
+              <select id="gender" name="Gender"></select>
+            </div>
+            <div class="form-group">
+              <label for="Age">Age:</label>
+              <select id="Age" name="Age"></select>
+            </div>
+            <div class="form-group">
+              <label for="Occupation">Occupation:</label>
+              <select id="Occupation" name="Occupation"></select>
+            </div>
+            <div class="form-group">
+              <label for="cityCategory">City Category:</label>
+              <select id="cityCategory" name="City_Category"></select>
+            </div>
+            <div class="form-group">
+              <label for="Stay_In_Current_City_Years"
+                >Stay In Current City Years:</label
+              >
+              <select
+                id="Stay_In_Current_City_Years"
+                name="Stay_In_Current_City_Years"
+              ></select>
+            </div>
+            <div class="form-group">
+              <label for="Marital_Status">Marital Status:</label>
+              <select id="Marital_Status" name="Marital_Status"></select>
+            </div>
+          </div>
+          <div class="submit">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+
+        <div id="InsertMsg"></div>
+      </div>
+    </div>
+  </body>
+
+  <script src="/static/js/const.js"></script>
+  <script src="/static/js/index.js"></script>
+  <script src="/static/js/search.js"></script>
+  <script src="/static/js/edit.js"></script>
+</html>
