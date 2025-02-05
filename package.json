@@ -5,7 +5,7 @@
   },
   "scripts": {
     "convert:ipynb": "node convert-ipynb-to-md.js",
-    "docs:dev": "npm run convert:ipynb && vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
