@@ -1,16 +1,10 @@
 {
-  "devDependencies": {
-    "vitepress": "^1.6.3",
-    "vitepress-sidebar": "^1.30.2"
-  },
-  "scripts": {
-    "convert:ipynb": "node convert-ipynb-to-md.js",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "dependencies": {
-    "markdown-it": "^14.1.0",
-    "markdown-it-container": "^4.0.0"
-  }
+    "husky": {
+        "hooks": {
+            "pre-commit": "node scripts/generate-readme.js && git add README.md"
+        }
+    },
+    "devDependencies": {
+        "husky": "^9.1.7"
+    }
 }
